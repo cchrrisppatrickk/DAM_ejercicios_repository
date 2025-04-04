@@ -1,5 +1,6 @@
 package com.example.helloword;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
@@ -28,14 +29,10 @@ public class MainActivity extends AppCompatActivity {
 //        });
 
 
-        Button btnShowMessage = findViewById(R.id.btnShowMessage);
-        tvMessage = findViewById(R.id.tvMessage);
-
-        btnShowMessage.setOnClickListener(v -> {
-            Log.i("MAIN_APP", "Click en botón!!!!");
-            tvMessage.setText("Hola clase 2025");
-            contador++;
-            tvMessage.setText(String.valueOf(contador));
+        Button btnGoToSecond = findViewById(R.id.btnGoToSecond);
+        btnGoToSecond.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+            startActivity(intent);
         });
 
 /// main
