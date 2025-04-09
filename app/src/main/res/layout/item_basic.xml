@@ -4,10 +4,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:minHeight="80dp">
 
     <TextView
-        android:id="@+id/tvNombre"
+
+        android:id="@+id/tvColorName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="18sp"
@@ -16,11 +18,11 @@
         app:layout_constraintTop_toTopOf="parent"/>
 
     <TextView
-        android:id="@+id/tvTelefono"
+        android:id="@+id/tvHexCode"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@android:color/darker_gray"
+        android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvNombre"/>
+        app:layout_constraintTop_toBottomOf="@id/tvColorName"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
