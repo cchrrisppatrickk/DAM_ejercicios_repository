@@ -1,6 +1,9 @@
 package com.example.helloword;
 
 import android.os.Bundle;
+import android.util.Log;
+import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,6 +12,12 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
+
+
+    private int contador = 1;
+
+    private TextView tvMessage;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,10 +30,14 @@ public class MainActivity extends AppCompatActivity {
 //            return insets;
 //        });
 
+        Button btmShowMessage = findViewById(R.id.btnShowMessage);
+        tvMessage = findViewById(R.id.btnShowMessage);
 
-
-
-        //semana2 rama
+        btmShowMessage.setOnClickListener(v ->
+                Log.i("MAIN_APP", "Click en boton!!!!"));
+                    tvMessage.setText("Hola clase 2025");
+                    contador++;
+                    tvMessage.setText(String.valueOf(contador));
 
 
     }
