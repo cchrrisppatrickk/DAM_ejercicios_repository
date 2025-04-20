@@ -12,24 +12,29 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HelloWord"
         tools:targetApi="31">
-
-
+        <activity
+            android:name=".FormColorActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CreateColorActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ColorListActivity"
+            android:exported="false" />
         <activity
             android:name=".SecondActivity"
             android:exported="true"
             android:label="@string/title_activity_second"
             android:theme="@style/Theme.HelloWord.NoActionBar">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-    </activity>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-
-    <activity
-        android:name=".MainActivity"
-        android:exported="false" />
-
-</application>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+    </application>
 
 </manifest>

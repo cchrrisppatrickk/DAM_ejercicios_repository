@@ -17,48 +17,35 @@ import java.util.List;
 
 public class BasicAdapter extends RecyclerView.Adapter<BasicViewHolder> {
 
-    //-
-    private List<ColorItem> colorItems;
+    // new BasicAdapter(data);
+    private final List<String> data;
 
-    public BasicAdapter(List<ColorItem> colorItems) {
-        this.colorItems = colorItems;
+    public BasicAdapter(List<String> data){
+        this.data = data;
     }
 
 
     @NonNull
     @Override
-    public BasicViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public com.example.helloword.adapters.BasicViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.item_basic, parent, false);
+
         return new BasicViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull BasicViewHolder holder, int position) {
-        ColorItem colorItem = colorItems.get(position);
-
-        TextView tvColorName = holder.itemView.findViewById(R.id.tvColorName);
-        TextView tvHexCode = holder.itemView.findViewById(R.id.tvHexCode);
-
-        tvColorName.setText(colorItem.getColorName());
-        tvHexCode.setText(colorItem.getHexCode());
-
-        // Establecer el color de fondo del elemento
-        holder.itemView.setBackgroundColor(colorItem.getColorValue());
-
-        // Cambiar el color del texto según el brillo del fondo para mejor legibilidad
-        int textColor = isColorDark(colorItem.getColorValue()) ? Color.WHITE : Color.BLACK;
-        tvColorName.setTextColor(textColor);
-        tvHexCode.setTextColor(textColor);
+    public void onBindViewHolder(@NonNull com.example.helloword.adapters.BasicViewHolder holder, int position) {
+        TextView tvText = holder.itemView.findViewById(R.id.tvText);
+        String text = data.get(position);
+        tvText.setText(text);
     }
+
 
     @Override
     public int getItemCount() {
-        return colorItems.size();
+        return data.size();
     }
 
-    private boolean isColorDark(int color) {
-        double darkness = 1 - (0.299 * Color.red(color) + 0.587 * Color.green(color) + 0.114 * Color.blue(color)) / 255;
-        return darkness >= 0.5;
-    }
+
 }

@@ -5,11 +5,6 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SecondActivity">
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvBasic"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+    tools:context=".CreateColorActivity">
 
 </androidx.constraintlayout.widget.ConstraintLayout>
