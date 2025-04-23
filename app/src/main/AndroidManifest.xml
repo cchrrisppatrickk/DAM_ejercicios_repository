@@ -13,19 +13,20 @@
         android:theme="@style/Theme.HelloWord"
         tools:targetApi="31">
         <activity
+            android:name=".ColorListActivity"
+            android:exported="false" />
+        <activity
             android:name=".FormColorActivity"
             android:exported="false" />
         <activity
             android:name=".CreateColorActivity"
             android:exported="false" />
         <activity
-            android:name=".ColorListActivity"
+            android:name=".SecondActivity"
             android:exported="false" />
         <activity
-            android:name=".SecondActivity"
-            android:exported="true"
-            android:label="@string/title_activity_second"
-            android:theme="@style/Theme.HelloWord.NoActionBar">
+            android:name=".PokemonListActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
