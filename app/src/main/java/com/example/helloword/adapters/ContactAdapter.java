@@ -15,7 +15,7 @@ import com.example.helloword.entities.Contact;
 
 import java.util.List;
 
-public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.ContactViewHolder> {
+public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.ContactViewHolder>  {
 
     private List<Contact> contacts;
     private Context context;
